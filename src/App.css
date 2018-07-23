@@ -1,0 +1,95 @@
+
+
+.App { 
+    max-width: 500px;
+    margin: 5em auto 0;
+    background: #2962FF;
+    color: #fff;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto;
+    grid-template-areas: 
+        "title title title"
+        "form form form"
+        "table table table";
+    border-radius: 5px;
+}
+
+.App h1 {
+    margin: 0;
+    padding: 12px;
+    grid-area: title;
+    text-align: center;
+}
+
+.entity-form {
+    grid-area: form;
+}
+
+.entity-form > * {
+    padding: 10px;
+    outline: none;
+    border: 0;
+    font-size: 1.2em;
+}
+
+.entity-form input {
+    width: 80%;
+  
+}
+
+.entity-form button {
+    width: 16%;
+    background: #0D47A1;
+    color: #fff;
+}
+
+.entity-form button:hover {
+    cursor: pointer;
+    background: #42A5F5;
+}
+
+.entities-table {
+    grid-area: table;
+    background: #424242;
+}
+
+.entities-table__row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    text-align: center;
+    padding: 5px;
+    align-items: center;
+}
+
+.entities-table__row h3 {
+    margin: 0;
+}
+
+.entities-table__row__button-set {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 10px;
+}
+
+.entities-table__row__button-set > * {
+    outline: none;
+    border: none;
+    font-size: 2em;
+    color: #fff;
+    cursor: pointer;
+}
+
+.entities-table__row__button-set button:hover {
+    transform: scale(1.10);
+    transition: all 0.5s ease-in-out;
+}
+
+.entities-table__row__button-set button:first-child {
+    background: #FF5722;
+}
+
+.entities-table__row__button-set button:last-child {
+    background: #00C853;
+}
+
